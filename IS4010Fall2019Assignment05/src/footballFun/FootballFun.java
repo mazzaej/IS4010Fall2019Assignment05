@@ -1,8 +1,9 @@
 /*
  * IS4010 Fal 2019
  * Assignment 05
- * Bill Nicholson
- * nicholdw@ucmail.uc.edu
+ * Eric Mazza
+ * mazzaej@mail.uc.edu
+ * LATE SUBMISSION 10/3
  */
 package footballFun;
 
@@ -20,12 +21,29 @@ public class FootballFun {
 		if (translateScore(10).equals("you must be playing Quidditch ") == true) { correctCount++;}
 		
 		if (correctCount == 8) {
-			System.out.println("All tests passed");
+			System.out.println("All tests passed"); 
 		} else {
 			System.out.println("At least one test failed");
 		}
 	}
+	
+	/**
+	 * take int and spit out correct football term
+	 * @param int score
+	 * @return translated String
+	 */
+	
 	public static String translateScore (int score) {
-		return "";
+		String translation = " ";
+		if (score == 2) {translation = "safety";}
+		if (score == 3) {translation = "field goal";}
+		if (score == 6) {translation = "touchdown";}
+		if (score == 7) {translation = "touchdown and extra point";}
+		if (score == 8) {translation = "touchdown and 2-point conversion";}
+		if (score == -1) {translation = "";}
+		if (score == 1) {translation = "invalid";}
+		if (score == 10) {translation = "you must be playing Quidditch ";}
+		return translation;
 	}
+	
 }
